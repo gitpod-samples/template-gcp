@@ -1,0 +1,27 @@
+image: gitpod/workspace-full
+
+tasks:    
+  - name: 🛠️ Init workspace
+    init: |
+      echo '💫 GCP configuration'
+      echo $GCP_SERVICE_KEY | base64 -d > .gcloud-conf.json
+      
+      echo '🌤️ Install gcloud'
+      cd ..
+      curl -O https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-394.0.0-linux-x86_64.tar.gz
+      tar -xf google-cloud-cli-394.0.0-linux-x86_64.tar.gz
+      ./google-cloud-sdk/install.sh
+      cd ${GITPOD_REPO_ROOTS}
+
+      echo '💫 Create Alias: `gcloud`'
+      alias gcloud=/workspace/google-cloud-sdk/bin/gcloud
+      source ~/.bashrc
+
+      echo '🌤️ Configure gcloud with your key and projects you have to set in your Gitpod account : https://gitpod.io/user/variables'
+      gcloud auth activate-service-account --key-file .gcloud-conf.json
+      gcloud config set project $GCP_PROJECT
+
+vscode:
+  extensions:
+    - googlecloudtools.cloudcode
+    - seatonjiang.gitmoji-vscode
