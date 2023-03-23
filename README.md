@@ -6,15 +6,15 @@ A Google Cloud Platform template configured for [Gitpod](www.gitpod.io) to give 
 
 Click the button below to start a new development environment:
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://github.com/jeanphibaconnais/template-gcp/-/tree/main/)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io#https://github.com/jeanphibaconnais/template-gcp/-/tree/main/)
 
 ## Get Started With Your Own Project
 
 ### A new project
 
-Add on your Gitpod workspace a variable `GCP_SERVICE_KEY` for this repository with the value of your service account.
+To use this template, you must define your base64-encoded service account key in a variable named `GCP_SERVICE_KEY` and your project name in a variable called `GCP_PROJECT` for your repository.
 
-To get this key, check [this page](https://cloud.google.com/iam/docs/keys-create-delete?hl=fr).
+To get your service account key, check [this page](https://cloud.google.com/iam/docs/keys-create-delete).
 
 Next, click the above "Open in Gitpod" button to start a new workspace. Once you're ready to push your first code changes, Gitpod will guide you to fork this project so you own it.
 
