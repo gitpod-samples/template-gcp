@@ -6,7 +6,7 @@ A Google Cloud Platform template configured for [Gitpod](www.gitpod.io) to give 
 
 Click the button below to start a new development environment:
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io#https://github.com/jeanphibaconnais/template-gcp/-/tree/main/)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io#https://github.com/gitpod-samples/template-gcp/-/tree/main/)
 
 ## Get Started With Your Own Project
 
